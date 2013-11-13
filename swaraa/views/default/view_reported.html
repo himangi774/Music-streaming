@@ -1,0 +1,13 @@
+{{extend 'layout.html'}}
+<div style="float:left; width=30%;background-color:grey">
+    <p style='text-align:justified;font-family:Monotype Corsiva;font-size:15px'>
+    Reported songs:
+    <ul>
+	{{ for i in son :}}
+	<li><a href="songpage?id1={{=i['song.id']}}">	{{=i['song.Title']}}</a> reported by <a href="view_others_Profile?id1={{=i['report_song.user_id']}}">{{=i['auth_user.username']}}</a></li>
+	
+	{{pass}}
+    </ul>
+
+    </p>
+</div>
